@@ -40,8 +40,15 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            OneHigherPlayer oneHigherPlayer = new OneHigherPlayer();
+            oneHigherPlayer.Name = "Oneupper McUpper";
+
+            butthole.Play(oneHigherPlayer);
+
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, butthole
+                player1, player2, player3, large, butthole, oneHigherPlayer
             };
 
             PlayMany(players);
