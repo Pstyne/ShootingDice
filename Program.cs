@@ -47,8 +47,15 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            HumanPlayer humanPlayer = new HumanPlayer();
+            humanPlayer.Name = "Thomas Anderson";
+
+            oneHigherPlayer.Play(humanPlayer);
+
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, butthole, oneHigherPlayer
+                player1, player2, player3, large, butthole, oneHigherPlayer, humanPlayer
             };
 
             PlayMany(players);
