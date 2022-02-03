@@ -8,7 +8,7 @@ namespace ShootingDice
     {
       public override int Roll()
       {
-        return new Random().Next(DiceSize / 2, DiceSize);
+        return new Random().Next((DiceSize / 2) + 1, DiceSize);
       }
     }
 }

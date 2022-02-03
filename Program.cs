@@ -87,8 +87,21 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            SoreLoserUpperHalfPlayer soreLoserUpperHalfPlayer = new SoreLoserUpperHalfPlayer();
+            soreLoserUpperHalfPlayer.Name = "High rolling LOSER";
+
+            try
+            {
+              soreLoserUpperHalfPlayer.Play(upperHalfPlayer);
+            } catch (Exception ex)
+            {
+              Console.WriteLine(ex.Message);
+            }
+
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, butthole, oneHigherPlayer, humanPlayer, creativeSmackTalkingPlayer, soreLoserPlayer, upperHalfPlayer
+                player1, player2, player3, large, butthole, oneHigherPlayer, humanPlayer, creativeSmackTalkingPlayer, soreLoserPlayer, upperHalfPlayer, soreLoserUpperHalfPlayer
             };
 
             PlayMany(players);
@@ -126,7 +139,7 @@ namespace ShootingDice
                 } 
                 catch (Exception ex)
                 {
-                  Console.WriteLine(ex.Message);
+                  Console.WriteLine($"{ex.Message}!! *cries*");
                 }
             }
         }
