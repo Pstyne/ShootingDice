@@ -24,6 +24,10 @@ namespace ShootingDice
             if (myRoll > otherRoll)
             {
                 Console.WriteLine($"{Name} Wins!");
+                if (other.GetType().Equals(typeof(SoreLoserPlayer)))
+                {
+                  throw new Exception($"{other.Name}: Aww man this game is RIGGED!");
+                }
             }
             else if (myRoll < otherRoll)
             {
