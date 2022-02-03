@@ -74,8 +74,21 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            UpperHalfPlayer upperHalfPlayer = new UpperHalfPlayer();
+            upperHalfPlayer.Name = "High roller";
+
+            try
+            {
+              upperHalfPlayer.Play(soreLoserPlayer);
+            } catch (Exception ex)
+            {
+              Console.WriteLine(ex.Message);
+            }
+
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, butthole, oneHigherPlayer, humanPlayer, creativeSmackTalkingPlayer, soreLoserPlayer
+                player1, player2, player3, large, butthole, oneHigherPlayer, humanPlayer, creativeSmackTalkingPlayer, soreLoserPlayer, upperHalfPlayer
             };
 
             PlayMany(players);
