@@ -54,8 +54,15 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            CreativeSmackTalkingPlayer creativeSmackTalkingPlayer = new CreativeSmackTalkingPlayer();
+            creativeSmackTalkingPlayer.Name = "Shifty Eyes";
+
+            humanPlayer.Play(creativeSmackTalkingPlayer);
+
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, butthole, oneHigherPlayer, humanPlayer
+                player1, player2, player3, large, butthole, oneHigherPlayer, humanPlayer, creativeSmackTalkingPlayer
             };
 
             PlayMany(players);
